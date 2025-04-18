@@ -4,6 +4,8 @@ Getting tired of writine printing statements with format strings in rust? This i
 
 ## Usage
 
+Install with `cargo add pyprint`.
+
 Simply write like python in rust.
 
 ```rust
