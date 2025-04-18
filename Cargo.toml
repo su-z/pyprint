@@ -2,6 +2,10 @@
 name = "pyprint"
 version = "1.0.0"
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/su-z/pyprint.git"
+description = "Library to enable python-style printing in rust"
+readme = "README.md"
 
 [lib]
 name = "pyprint"

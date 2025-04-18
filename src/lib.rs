@@ -108,6 +108,7 @@ macro_rules! match_variants {
     };
 }
 
+/// Print, without processing the returned Result object
 #[macro_export]
 macro_rules! pprint {
     ($($t:tt)*) => {
@@ -115,6 +116,7 @@ macro_rules! pprint {
     };
 }
 
+/// Print, unwrapping returned Result object
 #[macro_export]
 macro_rules! pprn {
     ($($t:tt)*) => {
@@ -122,6 +124,7 @@ macro_rules! pprn {
     };
 }
 
+/// Print only in debug mode.
 #[macro_export]
 macro_rules! dprint {
     ($($t:tt)*) => {
@@ -129,6 +132,7 @@ macro_rules! dprint {
     };
 }
 
+/// Print only in debug mode, unwrapping the result
 #[macro_export]
 macro_rules! dprn {
     ($($t:tt)*) => {
@@ -136,6 +140,7 @@ macro_rules! dprn {
     };
 }
 
+/// Print to stderr
 #[macro_export]
 macro_rules! eprint {
     ($($t:tt)*) => {
@@ -143,6 +148,7 @@ macro_rules! eprint {
     };
 }
 
+/// Print to stderr, unwrapping the result
 #[macro_export]
 macro_rules! eprn {
     ($($t:tt)*) => {
@@ -150,7 +156,7 @@ macro_rules! eprn {
     };
 }
 
-
+/// Print to stderr, only in debug mode.
 #[macro_export]
 macro_rules! deprint {
     ($($t:tt)*) => {
@@ -158,6 +164,7 @@ macro_rules! deprint {
     };
 }
 
+/// Print to stderr only in debug mode, unwrapping the result.
 #[macro_export]
 macro_rules! deprn {
     ($($t:tt)*) => {
@@ -165,13 +172,9 @@ macro_rules! deprn {
     };
 }
 
-
-
 #[test]
 fn test_print() {
     pprn!(flush=true,"Hello",34,45,sep=";", end=".\n",34);
     dprn!(flush=true,"Hello",34,45,sep=";", end=".\n",34);
     eprn!("Hi!");
 }
-
-
