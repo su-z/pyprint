@@ -1,2 +1,13 @@
 # pyprint
-Library to enable python-style printing in rust
+
+Getting tired of writine printing statements with format strings in rust? This is a library to enable python-style printing in rust. It is implemented using rust macros. Anything with the `Display` trait implemented can be printed.
+
+## Usage
+
+Simply write like python in rust.
+
+```rust
+use pyprint::pprn;
+let a = 5;
+pprn!("Progress:", a, sep=" ", end="\r");
+```

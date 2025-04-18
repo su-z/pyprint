@@ -1,0 +1,10 @@
+[package]
+name = "pyprint"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "pyprint"
+path = "src/lib.rs"
+
+[dependencies]
